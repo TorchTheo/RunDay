@@ -1,5 +1,7 @@
 package cn.sqc.runday.view;
 
+import com.sun.tools.javac.Main;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -58,11 +60,11 @@ public class LoginFrame extends JFrame {
                 //获取输入框内容
                 String userName = userField.getText();
                 String password = new String(userFiled2.getPassword());
-                if("THEO".equals(userName) && "Csh-020415".equals(password)) {
+                if("".equals(userName) && "".equals(password)) {
                     //登陆成功
                     JOptionPane.showMessageDialog(null, "欢迎" + userName + "来到天天酷跑");
                     //跳转到下一个界面
-
+                    new MainFrame();
                     //关闭当前界面
                     dispose();
                 } else if("".equals(userName) || "".equals(password)) {
