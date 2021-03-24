@@ -54,6 +54,7 @@ public class MainFrame extends JFrame implements MouseListener {
          path = getClass().getClassLoader().getResource("resources/images/115.png").getPath();
          this.setIconImage(new ImageIcon(path).getImage());//logo
          this.setVisible(true);
+         this.setTitle("天天酷跑-THEO制作");
      }
 
     @Override
