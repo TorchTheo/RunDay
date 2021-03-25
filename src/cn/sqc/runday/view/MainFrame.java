@@ -1,5 +1,7 @@
 package cn.sqc.runday.view;
 
+import cn.sqc.runday.controller.WindowFrame;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -49,7 +51,7 @@ public class MainFrame extends JFrame implements MouseListener {
          //设置窗体基本属性大小 居中 边框隐藏 默认关闭按钮 logo图标
          this.setSize(1200, 730);
          this.setLocationRelativeTo(null);//居中
-//         this.setUndecorated(true);//隐藏边框
+         this.setUndecorated(true);//隐藏边框
          this.setDefaultCloseOperation(EXIT_ON_CLOSE);
          path = getClass().getClassLoader().getResource("resources/images/115.png").getPath();
          this.setIconImage(new ImageIcon(path).getImage());//logo
@@ -61,6 +63,7 @@ public class MainFrame extends JFrame implements MouseListener {
     public void mouseClicked(MouseEvent e) {
         if(e.getSource().equals(start)) {
             //跳转到下一界面
+            new WindowFrame().Start();
             //new WindowFrame().start();
         }else if(e.getSource().equals(exit)) {
             dispose();
