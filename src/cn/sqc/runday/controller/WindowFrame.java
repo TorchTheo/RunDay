@@ -1,5 +1,7 @@
 package cn.sqc.runday.controller;
 
+import cn.sqc.runday.view.GameFrame;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -53,6 +55,7 @@ public class WindowFrame extends JFrame implements Runnable {
                 e.printStackTrace();
             }
         }
+        new GameFrame();
     }
 
     public static void main(String[] args) {
